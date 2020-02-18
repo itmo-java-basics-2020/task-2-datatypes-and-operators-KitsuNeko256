@@ -40,6 +40,8 @@ public class Task2 {
     boolean numberInRange(Integer number, Integer leftBound, Integer rightBound, Boolean inclusively) {
         if (number == null || leftBound == null || rightBound == null || inclusively == null)
             return false;
+        if (leftBound > rightBound)
+            return false;
         if (inclusively)
             return leftBound <= number && number <= rightBound;
         return leftBound < number && number < rightBound;
